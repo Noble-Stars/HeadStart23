@@ -1,0 +1,135 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 200px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 200px;
+    height: 100vh;
+    padding: 20px;
+    border-right: 2px solid #858585;
+    position: fixed;
+    left: 0;
+    bottom: 0;   
+    overflow-y: auto;
+}
+
+.sidebar-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 65px;
+}
+
+.sidebar-head img {
+    max-width:  30px;
+    max-height: 30px;
+}
+
+.sidebar-head span {
+    color: #1C1C1C;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.sidebar-body {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-left: 8px;
+}
+
+.sidebar-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-group img {
+    max-width: 24px;
+    max-width: 24px;
+}
+
+.sidebar-group span {
+    color: #858585;
+    font-size: 20px;
+}
+
+.clicked {
+    color: #FF7008;
+    font-weight: bold;
+}
+
+.group-label {
+    margin-left: 20px;
+}
+
+span {
+        display: inline; 
+    }
+
+
+
+@media only screen and (min-width: 200px) and (max-width: 576px) {
+    .sidebar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0px;
+        width: 100%;
+        height: 60px;
+        padding: 0px;
+        position: fixed;
+        border-right: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    span {
+        display: none;
+    }
+
+
+    .sidebar-head {
+        display: none;
+    }
+
+    .sidebar-body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        align-items: center;
+        margin-left: 0px;
+        gap: 0px;
+    }
+
+    .group-label {
+        margin-left: 0px;
+    }
+
+    .sidebar-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .sidebar-group img {
+        max-width: 35px;
+        max-width: 35px;
+    }
+}
